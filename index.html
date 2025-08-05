@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Contoh Halaman Interaktif</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 12px;
+        }
+
+        form {
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 15px;
+            border: none;
+            background-color: #3498db;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+
+        video, iframe {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 15px;
+            background-color: #2c3e50;
+            color: #fff;
+            border-radius: 0 0 12px 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Halaman Interaktif</h1>
+
+        <!-- Formulir Data Diri -->
+        <form id="formData">
+            <h2>Formulir Data Diri</h2>
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="kelas">Kelas:</label>
+            <input type="text" id="kelas" name="kelas" required>
+
+            <button type="submit">Kirim</button>
+        </form>
+        <h2>Data Siswa</h2>
+        <table border="1" cellpadding="10" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Kelas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Hamdan</td>
+                    <td>XII RPL</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Fadil</td>
+                    <td>XII TKJ</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Dimas</td>
+                    <td>XII MM</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Levi</td>
+                    <td>XII PKM</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Mikasa</td>
+                    <td>XII OTKP</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Video -->
+        <h2>Video</h2>
+        <video controls width="100%">
+            <source src="video.mp4" type="video/mp4">
+            Maaf, browser Anda tidak mendukung pemutaran video. Silakan gunakan browser lain atau periksa file video.
+        </video>
+
+        <!-- YouTube Video -->
+        <h2>Video YouTube(inframe)</h2>
+        <iframe width="100%" height="315"
+            src="https://www.youtube.com/embed/lB8ASupNtlw"
+            title="Everything You Are - Hindia"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <!-- Footer Copyright -->
+    <footer>
+        &copy;Muhammad Hamdan Alawi XII RPL 2025.
+    </footer>
+
+    <script>
+        let no = 1;
+        document.getElementById("formData").addEventListener("submit", function(e) {
+            e.preventDefault();
+            const nama = document.getElementById("nama").value;
+            const email = document.getElementById("email").value;
+            const kelas = document.getElementById("kelas").value;
+
+                    
+
+            this.reset(); 
+        });
+    </script>
+</body>
+</html>
